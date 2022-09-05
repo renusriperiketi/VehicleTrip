@@ -1,0 +1,21 @@
+<p><b>Trip name:</b><%= @trip.trip_name %></p>
+
+<p><b>Trip number:</b><%= @trip.trip_number %></p>
+
+<p><b>Distance:</b><%= @trip.distance %></p>
+
+<p><b>Fuel Consumption:</b><%= @trip.fuel_consumption %></p>
+
+
+
+
+<ul>
+    <li><%= link_to "Edit", edit_vehicle_trip_path(@trip)%></li>
+    
+    <li><%= link_to "Destroy", vehicle_trip_path(@trip), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+
+</ul>
+

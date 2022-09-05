@@ -1,0 +1,26 @@
+<%= form_with model: [ @vehicle, @vehicle.trips.build ] do |form| %>
+    <p>
+    <%= form.label :trip_name %><br>
+    <%= form.text_field :trip_name %>
+  </p>
+  
+  <p>
+    <%= form.label :trip_number %><br>
+    <%= form.text_field :trip_number %>
+  </p>
+
+  <p>
+    <%= form.label :distance %><br>
+    <%= form.text_area :distance %>
+  </p>
+
+   <p>
+    <%= form.label :fuel_consumption %><br>
+    <%= form.text_area :fuel_consumption %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>

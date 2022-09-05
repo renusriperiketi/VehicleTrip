@@ -1,0 +1,39 @@
+<%= form_with model: @vehicle do |form| %>
+  <div>
+  <%= form.label :vehicle_number %><br>
+  <%= form.text_field :vehicle_number %>
+  <% @vehicle.errors.full_messages_for(:vehicle_number).each do |message| %>
+    <div><%= message %></div>
+  <% end %>
+  </div>
+
+  <div>
+  <%= form.label :vehicle_type %><br>
+  <%= form.text_area :vehicle_type %><br>
+  <% @vehicle.errors.full_messages_for(:vehicle_type).each do |message| %>
+    <div><%= message %></div>
+  <% end %>
+  </div>
+
+  <div>
+  <%= form.label :vehicle_model %><br>
+  <%= form.text_area :vehicle_model %><br>
+  <% @vehicle.errors.full_messages_for(:vehicle_model).each do |message| %>
+    <div><%= message %></div>
+  <% end %>
+  </div>
+
+  <div>
+  <%= form.label :vehicle_color %><br>
+  <%= form.text_area :vehicle_color %><br>
+  <% @vehicle.errors.full_messages_for(:vehicle_color).each do |message| %>
+    <div><%= message %></div>
+  <% end %>
+  </div>
+
+  <div>
+  <%= form.submit %>
+  </div>
+
+
+<% end %>

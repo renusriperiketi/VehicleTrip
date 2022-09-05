@@ -1,0 +1,30 @@
+<h1><b> Vehicle Number:</b><%= @vehicle.vehicle_number %></h1>
+
+<p><b> Vehicle Type:</b><%= @vehicle.vehicle_type %></p>
+
+<p><b> Vehicle Model:</b><%= @vehicle.vehicle_model %></p>
+
+<p><b> Vehicle Color:</b><%= @vehicle.vehicle_color %></p>
+
+
+<ul>
+    <li><%= link_to "Edit", edit_vehicle_path(@vehicle)%></li>
+    
+    <li><%= link_to "Destroy", vehicle_path(@vehicle), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+
+</ul>
+
+
+
+<h2>Trips</h2>
+<%= render @vehicle.trips %>
+
+<%= link_to "Add Trip", new_vehicle_trip_path(@vehicle)%>
+
+
+
+
+
